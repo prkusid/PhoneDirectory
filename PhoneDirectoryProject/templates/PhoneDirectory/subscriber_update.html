@@ -1,0 +1,28 @@
+{% extends "PhoneDirectory/base.html" %}
+
+{% block title%}update {% endblock%}
+
+{% block body%}
+<div class="container">
+  <div class="jumbotron">
+
+    <h1>Update {{subscriber.name|upper}}</h1><hr>
+
+    <form class="" method="post">
+      {% csrf_token %}
+
+      <label for="name">NAME:</label><br><br>
+      <input id="name" type="text" name="sname" value="{{subscriber.name}}"><br><br>
+
+      <label for="phn">Phone Number:</label><br><br>
+      <input id="phn" type="text" name="sphn" value="{{subscriber.phone_no}}"><br><br>
+      {% if msg%}<p>*{{msg}}</p>{% endif %}
+
+      <input class="btn btn-primary" type="submit" name="" value="UPDATE">
+
+    </form><br>
+    <a href="/"><button id="special-btn" class="btn btn-warning" type="button" name="button">CANCLE</button></a>
+    </div>
+  </div>
+
+{% endblock%}

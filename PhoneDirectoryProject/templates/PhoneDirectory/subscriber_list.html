@@ -1,0 +1,36 @@
+{% extends "PhoneDirectory/base.html" %}
+
+{% block title%}subscriber {% endblock%}
+
+{% block body%}
+
+<div class="container">
+
+  <div class="jumbotron">
+
+
+    <h1>PHONE DIRECTORY
+    <a href="/add"><button type="button" class="btn btn-success" name="button">Add Subscriber</button></a></h1><hr>
+    {% if subscriber_list %}
+        <table>
+          <thead>
+            <th>NAME</th>
+            <th>PHONE No.</th>
+            <th id="action">ACTION</th>
+          </thead>
+          {% for subscriber in subscriber_list %}
+          <tr>
+            <td>{{subscriber.name|upper}}</td>
+            <td>{{subscriber.phone_no}}</td>
+            <td><a href="/delete/{{subscriber.id}}"><button type="button" class="btn btn-danger" name="button">Delete</button> </a>&nbsp&nbsp&nbsp
+            <a href="/update/{{subscriber.id}}"><button type="button" class="btn btn-warning" name="button">Update</button></a></td>
+          </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <h2>No Subscribers Are Availabel.</h2>
+    {% endif %}
+</div>
+  </div>
+
+    {% endblock %}

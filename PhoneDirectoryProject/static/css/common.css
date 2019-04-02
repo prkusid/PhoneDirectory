@@ -1,0 +1,44 @@
+h1{
+  text-align: center;
+  color: red;
+}
+
+td{
+    width: 700px;
+    height: 50px;
+    padding-left: 100px;
+    padding-top: 20px;
+    font-weight: 700;
+
+}
+
+th{
+  height: 40px;
+  background: red;
+  padding-left: 90px;
+  color:white;
+}
+
+#action{
+  padding-left: 150px;
+}
+
+.container .jumbotron{
+  background: rgba(34, 244, 104,0.6);
+  margin-top: 50px;
+}
+
+input{
+  width: 45%;
+  height: 40px;
+}
+
+#special-btn{
+  width: 45%;
+  height: 40px;
+}
+
+p{
+  color: red;
+  font-size: 20px;
+}
